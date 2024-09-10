@@ -1,0 +1,23 @@
+<?php 
+$host    = "localhost"; 
+#echo $host;
+$port    = "5432"; 
+#echo $port;
+$dbname  = "dbname"; 
+#echo $dbname;
+$user    = "user"; 
+#echo $user;
+$pass    = "password";
+#echo $pass;
+$sslmode = "require";      
+#echo $sslmode;
+ 
+$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass sslmode=$sslmode"); 
+
+#echo $conn;
+
+if (!$conn){     
+  echo "Not Connect :". pg_error();     
+  exit;     
+}
+?>
